@@ -40,3 +40,45 @@ c:\users\asceansion\documents\visual studio 2015\Projects\animeBot\animeBot\bin\
 c:\users\asceansion\documents\visual studio 2015\Projects\animeBot\animeBot\bin\PCLStorage.Abstractions.xml
 c:\users\asceansion\documents\visual studio 2015\Projects\animeBot\animeBot\bin\System.Net.Http.Extensions.xml
 c:\users\asceansion\documents\visual studio 2015\Projects\animeBot\animeBot\bin\System.Net.Http.Primitives.xml
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\animeBot.dll.config
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\animeBot.dll
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\animeBot.pdb
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\Common.Logging.dll
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\jaMAL.dll
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\MalApi.dll
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\Microsoft.Bot.Builder.dll
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\Microsoft.Bot.Connector.dll
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\Microsoft.Bot.Connector.Utilities.dll
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\Microsoft.Rest.ClientRuntime.dll
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\Microsoft.Threading.Tasks.dll
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\Newtonsoft.Json.dll
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\PCLStorage.Abstractions.dll
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\PCLStorage.dll
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\SGEnviro.dll
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\System.Net.Http.Extensions.dll
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\System.Net.Http.Formatting.dll
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\System.Net.Http.Primitives.dll
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\System.Web.Http.dll
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\System.Web.Http.WebHost.dll
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\Common.Logging.pdb
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\Common.Logging.xml
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\MalApi.xml
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\Microsoft.Rest.ClientRuntime.xml
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\Microsoft.Threading.Tasks.xml
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\Microsoft.WindowsAzure.Configuration.xml
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\Newtonsoft.Json.xml
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\PCLStorage.xml
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\PCLStorage.Abstractions.xml
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\System.Net.Http.Extensions.xml
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\System.Net.Http.Formatting.xml
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\System.Net.Http.Primitives.xml
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\System.Web.Http.xml
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\bin\System.Web.Http.WebHost.xml
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\obj\Release\animeBot.csprojResolveAssemblyReference.cache
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\obj\Release\animeBot.dll
+C:\Users\Asceansion\Desktop\AnimeBot\animeBot\obj\Release\animeBot.pdb

@@ -125,7 +125,7 @@ namespace animeBot
                 //}
                 if (message.Text == "Help")
                 {
-                    return message.CreateReplyMessage("Currently you may retrieve the anime list of a person from MAL by typing their name or finding out the PSI of the north region by typing PSI,enjoy");
+                    return message.CreateReplyMessage("Currently you may retrieve the anime list of a person from MAL by typing their name and even search for anime descriptions by their name or find out the PSI of the north region by typing PSI,enjoy");
                 }
                 else if (message.Text == "Romance")
                 {
@@ -140,45 +140,50 @@ namespace animeBot
                     response = "PSI for North Region is " + result.North.Reading;
                     return message.CreateReplyMessage(response);
                 }
-                //MAL anime list search retrieval
-                //using (MyAnimeListApi api = new MyAnimeListApi())
-                //{
-                //    api.UserAgent = "my_app"; // MAL now requires applications to be whitelisted. Whitelisted applications identify themselves by their user agent.
+                else if (message.Text.Contains("username"))
+                {
+                    string name = "";
+                    name = (message.Text.Replace("username", string.Empty)).Trim();
+                 //   MAL anime list search retrieval
+                    using (MyAnimeListApi api = new MyAnimeListApi())
+                    {
+                        api.UserAgent = "my_app"; // MAL now requires applications to be whitelisted. Whitelisted applications identify themselves by their user agent.
 
-                //    MalUserLookupResults userLookup = api.GetAnimeListForUser(message.Text);
-                //    foreach (MyAnimeListEntry listEntry in userLookup.AnimeList)
-                //    {
-                //        finalOutput += (listEntry.AnimeInfo.Title + " | " + listEntry.Score + ". ");
+                        MalUserLookupResults userLookup = api.GetAnimeListForUser(name);
+                        foreach (MyAnimeListEntry listEntry in userLookup.AnimeList)
+                        {
+                            finalOutput += (listEntry.AnimeInfo.Title + " | " + listEntry.Score + ". ");
 
-                //    }
+                        }
 
-                //    return message.CreateReplyMessage(string.Concat(finalOutput.Take(1000)));
-                //}
-
+                        return message.CreateReplyMessage(string.Concat(finalOutput.Take(1000)));
+                    }
+                }
                 //Create the REST Services 'Find Location by Query' request
-                else {
+                else if(message.Text.Contains("search")){
+                    string anime = "";
+                    anime = (message.Text.Replace("search", string.Empty)).Trim();
                     try
                     {
-                        string animeListRequest = CreateRequest(message.Text);
+                        string animeListRequest = CreateRequest(anime);
                         XmlDocument animeListResponse = MakeRequest(animeListRequest);
-                        //    ProcessResponse(animeListResponse);
                         XmlNodeList titleList = animeListResponse.GetElementsByTagName("title");
                         XmlNodeList synopsisList = animeListResponse.GetElementsByTagName("synopsis");
-                        //for (int i = 0; i < titleList.Count; i++)
-                        //{
-                        //string builder messes up the output
-                        /*
-                        sb.AppendFormat("\r\n{0})  Title: {1}", i, titleList[i].InnerXml);
-                        sb.AppendFormat("\r\n  Synopsis: {0}", synopsisList[i].InnerXml);
-
-                        txtArea.AppendText(sb.ToString());*/
-
-                        searchText += ((1) + ") Title: " + titleList[0].InnerXml + "\r\n");
-                        //txtArea.AppendText("Synopsis:  " + synopsisList[i].InnerXml + "\r\n");
-                        //txtArea.AppendText("Synopsis:  " + formatSynopsis(synopsisList[i]) + "\r\n");
-                        searchText += ("Synopsis:  " + decodeHtml(synopsisList[0].InnerXml) + "\r\n");
-                        searchText += ("-----------------------------------------------------------------------------\r\n");
-
+                        for (int i = 0; i < titleList.Count; i++)
+                        //    //{
+                        {
+                            searchText += ((i + 1) + ") Title: " + titleList[i].InnerXml + "\r\n");
+                            string MyString = ("Synopsis:  " + synopsisList[i].InnerXml + "\r\n");
+                            //    StringBuilder b = new StringBuilder(newText);
+                            // b.Replace("This", "Here");
+                            //     b.Replace("/&gt;\r\nn", "");
+                            //     b.Replace("&lt;br /&gt;\r\n&lt;br", "");
+                            //    MyString.Replace("/&gt;\r\nn", "");
+                            //remove </br>
+                            MyString = MyString.Replace("&lt;br /&gt;\r\n&lt;br", "");
+                            searchText += MyString;
+                            searchText += ("-----------------------------------------------------------------------------\r\n");
+                        }
                         //}
                         return message.CreateReplyMessage(searchText);
                     }
@@ -187,7 +192,7 @@ namespace animeBot
                         return message.CreateReplyMessage("searchfailed");
                     }
                 }
-
+                return message.CreateReplyMessage("Enter a valid term  ");
 
             }
 
@@ -196,7 +201,15 @@ namespace animeBot
                 return HandleSystemMessage(message);
             }
         }
-    
+        public static string XmlDecode(string value)
+        {
+            return value
+              .Replace("&lt;", "<")
+              .Replace("&gt;", ">")
+              .Replace("&quot;", "\"")
+              .Replace("&apos;", "'")
+              .Replace("&amp;", "&");
+        }
         private Message HandleSystemMessage(Message message)
         {
             if (message.Type == "Ping")
